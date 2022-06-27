@@ -1,0 +1,1 @@
+export const STORE_TOTAL_DATA = 'STORE_TOTAL_DATA';

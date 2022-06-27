@@ -1,0 +1,130 @@
+:root {
+	/* --acent-1: #ff7e57; */
+	/* --bg-clr: rgb(22, 22, 22);
+	--font-clr: white;
+	--neg-font-clr: black;
+	--active-clr: white; */
+
+	--acent-1: #1363df;
+	--acent-2: #47b5ff;
+	--bg-clr: #06283d;
+	--font-clr: #dff6ff;
+	--neg-font-clr: black;
+	--active-clr: #dff6ff;
+}
+* {
+	box-sizing: border-box;
+}
+html {
+	background-color: white;
+	color: var(--font-clr);
+}
+
+.App {
+	font-family: sans-serif;
+	text-align: center;
+}
+.developer {
+	color: var(--bg-clr);
+	font-size: 20px;
+}
+.loading {
+	top: 0;
+	left: 0;
+	position: absolute;
+	/* opacity: 0.2; */
+	height: 100%;
+	width: 100%;
+	background-color: rgba(68, 64, 64, 0.616);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.rotate {
+	height: 40px;
+	width: 40px;
+	border-top: 4px solid white;
+	border-right: 4px solid white;
+	border-radius: 50%;
+	animation: round1 1s infinite linear;
+}
+@keyframes round1 {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+input {
+	text-align: center;
+	width: 170px;
+	margin-bottom: 1.2rem;
+	border: 2px solid var(--acent-1);
+}
+.submitBtn {
+	background-color: var(--acent-1);
+	color: var(--font-clr);
+	/* border: 2px solid var(--font-clr); */
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+.submitBtn:hover {
+	border: 2px solid var(--acent-1);
+	color: var(--font-clr);
+	background-color: var(--bg-clr);
+}
+
+.active {
+	background-color: var(--active-clr) !important;
+	color: var(--neg-font-clr);
+}
+.disable-cursor {
+	cursor: not-allowed !important;
+}
+.singleDetails {
+	margin: 0 auto;
+	padding: 4rem;
+	width: min(600px, 80vw);
+}
+.singleDetails li.form-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.singleDetails li {
+	/* min-height: 130px; */
+	height: min(50vh, 280px);
+	position: relative;
+	border: 2px solid var(--acent-1);
+	list-style: none;
+	/* padding: 1rem; */
+	background-color: var(--bg-clr);
+}
+.name-title {
+	font-size: 20px;
+	padding: 1rem;
+	width: 100%;
+	color: var(--neg-font-clr);
+	background-color: var(--acent-2);
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+.pagination {
+	margin-top: 2rem;
+	padding: 0 4rem;
+	display: flex;
+	justify-content: center;
+}
+
+.pagination li {
+	background-color: var(--bg-clr);
+	list-style: none;
+	border: 2px solid var(--acent-1);
+	margin: 0 0.2rem;
+	padding: 0.5rem;
+	cursor: pointer;
+}
